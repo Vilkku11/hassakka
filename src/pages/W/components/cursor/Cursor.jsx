@@ -1,12 +1,14 @@
-import { useEffect, useRef, useState } from "react";
-import { motion, animate } from "framer-motion";
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import "./Cursor.css";
 
-const Cursor = ({ cursorVariant }) => {
+const Cursor = ({ cursorVariant, setCursorVariant, stickyElement }) => {
   const [mousePosition, setMousePosition] = useState({
     x: 0,
     y: 0,
   });
+
+  const [isHovered, setIsHovered] = useState(false);
 
   const variants = {
     default: {
@@ -34,22 +36,45 @@ const Cursor = ({ cursorVariant }) => {
     },
   };
 
-  useEffect(() => {
-    const mouseMove = (event) => {
-      setMousePosition({
-        x: event.clientX,
-        y: event.clientY,
-      });
-    };
+  const manageMouseOver = () => {
+    console.log("mouseHOVER");
+    setIsHovered(true);
+    //console.log(isHovered);
+    setCursorVariant("text");
+  };
 
+  const manageMouseLeave = () => {
+    console.log("MOUSE LEAVE");
+    //console.log(isHovered);
+    setIsHovered(false);
+    setCursorVariant("default");
+  };
+
+  const mouseMove = (event) => {
+    console.log("ishovered in mousemove", isHovered);
+    setMousePosition({
+      x: event.clientX,
+      y: event.clientY,
+    });
+  };
+
+  useEffect(() => {
+    console.log("update to ", isHovered);
+  }, [isHovered]);
+
+  useEffect(() => {
+    stickyElement.current.addEventListener("mouseover", manageMouseOver);
+    stickyElement.current.addEventListener("mouseleave", manageMouseLeave);
     window.addEventListener("mousemove", mouseMove);
     document.documentElement.classList.add("hide-cursor");
 
     return () => {
+      stickyElement.current.removeEventListener("mouseover", manageMouseOver);
+      stickyElement.current.removeEventListener("mouseleave", manageMouseLeave);
       window.removeEventListener("mousemove", mouseMove);
       document.documentElement.classList.remove("hide-cursor");
     };
-  }, []);
+  }, [isHovered]);
 
   return (
     <motion.div
