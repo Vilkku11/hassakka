@@ -18,6 +18,8 @@
   border-width: 1px;
   border-radius: 1rem;
   border-color: white;
+  max-height: 100vh;
+  overflow-y: auto;
 }
 
 .content-divider {
@@ -88,6 +90,7 @@
   .project-card-style {
     height: auto;
     padding: 1rem;
+    min-height: 100vh;
   }
 
   .content-divider {

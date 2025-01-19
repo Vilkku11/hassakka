@@ -64,14 +64,19 @@ export const projects: Project[] = [
     link: "https://github.com/timosiu/Software-Project2023",
     color: "04724D", //"#36454F",
   },
-  /* {
-    title: "Portfolio",
-    description:
-      "You're vieweing this project right now!!! My playground to try and extend the capapbilities of webbrowsers",
-    image: "",
-    link: "https://github.com/timosiu/Software-Project2023",
+  {
+    title: "Portfolio (this site)",
+    description: (
+      <>
+        A personal portfolio website built with React and Vanilla CSS, designed
+        as both a showcase of my projects and a playground for exploring modern
+        web capabilities.
+      </>
+    ),
+    image: "/src/assets/portfolio.webp",
+    link: "https://github.com/Vilkku11/portfolio",
     color: "04724D", //"#36454F",
-  },*/
+  },
 ] as const;
 
 export const SectionLinks: SectionLink[] = [

@@ -18,11 +18,38 @@
 @media (max-width: 575px) {
   .projects-header {
     font-size: 3rem;
+    padding: 0rem;
   }
 }
 
 @media (max-width: 767px) {
   .projects-header {
     padding-top: 4rem;
+    margin-bottom: 10rem;
+  }
+}
+
+@media (max-height: 656px) {
+  .projects-header {
+    position: relative;
+  }
+}
+
+@media (min-height: 657px) and (max-height: 720px) {
+  .projects-header {
+    font-size: 3rem;
+    padding: 0rem;
+  }
+}
+
+@media (min-height: 721px) and (max-height: 767px) {
+  .projects-header {
+    padding-top: 0rem;
+  }
+}
+
+@media (min-height: 768px) and (max-height: 800px) {
+  .projects-header {
+    padding-top: 1rem;
   }
 }

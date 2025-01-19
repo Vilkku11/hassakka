@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { motion, useTransform, useScroll, MotionValue } from "framer-motion";
+import { motion, useTransform, MotionValue } from "framer-motion";
 import { useImageOpenStore } from "../../../store/store";
 
 import ProjectLink from "../../projectLink/ProjectLink";
