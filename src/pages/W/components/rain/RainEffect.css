@@ -1,0 +1,44 @@
+.rain-container {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.rain {
+  position: absolute;
+  border-style: solid;
+  border-color: transparent;
+  border-right-color: rgba(255, 255, 255, 0.9);
+  border-right-width: 50px;
+  width: 50px;
+  bottom: 100%;
+  transform-origin: 100% 50%;
+  animation-name: rain;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.filter-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+}
+
+@keyframes rain {
+  from {
+    transform: rotate(105deg) translateX(0);
+  }
+  to {
+    transform: rotate(105deg) translateX(calc(var(--container-height) + 20px));
+  }
+}

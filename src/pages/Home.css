@@ -1,0 +1,21 @@
+.background-home {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(135deg, #00c6ff, #0072ff, #70e1f5, #00c6ff);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  align-items: center;
+}
+
+.home-header {
+  color: black;
+  font-size: 2rem;
+  text-align: center;
+  font-family: monospace;
+}

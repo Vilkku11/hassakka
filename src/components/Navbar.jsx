@@ -2,9 +2,6 @@ import { useLocation } from "react-router-dom";
 
 const NavBar = () => {
   const location = useLocation();
-  console.log("location");
-  console.log(location);
-  console.log(location.pathname);
 
   let pageLinks = [];
   let navbar = "";

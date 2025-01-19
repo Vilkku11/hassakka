@@ -1,0 +1,12 @@
+.attributions-items {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.attributions-header {
+  font-size: 2rem;
+}
