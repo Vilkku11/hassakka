@@ -38,9 +38,8 @@ const Card = ({
       <motion.div
         style={{
           scale: cardScale,
-          //backgroundColor: project.color,
           backgroundColor: project.color,
-          backdropFilter: "blur(50px)",
+          //backdropFilter: "blur(50px)",
           top: `calc(-10% + ${index * 20}px)`,
         }}
         className="project-card-style"

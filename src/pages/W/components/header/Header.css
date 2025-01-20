@@ -4,8 +4,9 @@
   right: 10%;
   transform: translateX(0%);
 
-  background-color: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(1rem);
+  /*background-color: rgba(0, 0, 0, 0.8);*/
+  /*backdrop-filter: blur(1rem);*/
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
   z-index: 9999;
   padding-top: 1.4rem;
   padding-bottom: 1.4rem;

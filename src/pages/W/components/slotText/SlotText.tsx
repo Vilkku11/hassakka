@@ -38,7 +38,7 @@ const SlotText = ({ words }: { words: DynamicWords[] }) => {
         }
         return prevIndex + 1;
       });
-    }, 2500);
+    }, 2700);
 
     return () => clearInterval(interval);
   }, [isVisible]);

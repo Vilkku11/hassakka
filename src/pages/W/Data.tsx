@@ -1,3 +1,8 @@
+import netspeed from "../../assets/netspeed.webp";
+import foresthaven from "../../assets/foresthaven.webp";
+import portfolio from "../../assets/portfolio.webp";
+import homeassistant from "../../assets/homeassistant.webp";
+
 import { DynamicWords, Project, SectionLink } from "./Types";
 
 export const dynamicWords: DynamicWords[] = [
@@ -14,14 +19,21 @@ export const dynamicWords: DynamicWords[] = [
 ];
 
 export const projects: Project[] = [
-  /*{
-    title: "Homeassistant",
-    description: "This is a simple test description",
-    image: "/src/assets/homeassistant.webp",
-    link: "https://github.com/Missing-Link-harkat/homeassistant",
-    color: "586F7C", //"#D3D3D3",
-  },
   {
+    title: "Homeassistant",
+    description: (
+      <>
+        A detailed exploration of <strong>Home Assistant</strong> and its
+        capabilities as a foundation for automation systems, conducted as part
+        of my thesis. Project contains automation install scripts for Home
+        Assistant install on top of OpenWRT.
+      </>
+    ),
+    image: homeassistant,
+    link: "https://github.com/Missing-Link-harkat/homeassistant",
+    color: "rgba(0,0,0,0.98)", //"#D3D3D3",
+  },
+  /*{
     title: "Autoclicker",
     description:
       "A cross-platform autoclicker built using the Tauri framework, offering advanced automation features such as customizable clicking, key holding, and precise mouse movement.",
@@ -36,14 +48,14 @@ export const projects: Project[] = [
         A command-line utility to monitor real-time internet usage on Linux
         systems. The tool fetches network interface data from
         <strong> /proc/net/dev</strong> and displays current usage statistics
-        for the specified interface. Built using <strong>C++</strong> with the
+        for the specified interface. Built using <strong>C++</strong> with the{" "}
         <strong>nlohmann/json</strong> library for JSON handling and{" "}
         <strong>CLI11</strong> for command-line parsing.
       </>
     ),
-    image: "/src/assets/netspeed.webp",
+    image: netspeed,
     link: "https://github.com/Vilkku11/netspeed",
-    color: "F4F4F9 ", //" #708090",
+    color: "rgba(0,0,0,0.98)", //" #708090",
   },
   {
     title: "Forest Haven Resort",
@@ -60,22 +72,22 @@ export const projects: Project[] = [
         <strong>GitHub Actions</strong>, hosted on Render.com.
       </>
     ),
-    image: "/src/assets/foresthaven.webp",
+    image: foresthaven,
     link: "https://github.com/timosiu/Software-Project2023",
-    color: "04724D", //"#36454F",
+    color: "rgba(0,0,0,0.98)", //"#36454F",
   },
   {
     title: "Portfolio (this site)",
     description: (
       <>
-        A personal portfolio website built with React and Vanilla CSS, designed
-        as both a showcase of my projects and a playground for exploring modern
-        web capabilities.
+        A personal portfolio website built with <strong>React</strong> and
+        Vanilla <strong>CSS</strong>, designed as both a showcase of my projects
+        and a playground for exploring modern web capabilities.
       </>
     ),
-    image: "/src/assets/portfolio.webp",
+    image: portfolio,
     link: "https://github.com/Vilkku11/portfolio",
-    color: "04724D", //"#36454F",
+    color: "rgba(0,0,0,0.98)", //"#36454F",
   },
 ] as const;
 
