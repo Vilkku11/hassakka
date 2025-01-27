@@ -9,8 +9,8 @@ import "./App.css";
 function App() {
   const routes = (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/w" element={<Portfolio />} />
+      <Route path="/" element={<Portfolio />} />
+      <Route path="/w" element={<Home />} />
       <Route path="/attributions" element={<Attributions />} />
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>
